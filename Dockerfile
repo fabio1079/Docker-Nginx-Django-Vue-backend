@@ -14,5 +14,8 @@ RUN pip3 install gunicorn
 
 ENV PYTHONUNBUFFERED 1
 
+COPY ./entrypoint.sh /todoback/
+ENTRYPOINT [ "/todoback/entrypoint.sh" ]
+
 # CMD ["gunicorn", "--chdir", "todoback", "--bind", ":8000", "todoback.wsgi:application"]
 

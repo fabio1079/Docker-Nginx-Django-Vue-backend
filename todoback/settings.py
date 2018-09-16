@@ -148,3 +148,5 @@ JWT_AUTH = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, '../', 'staticfiles')
