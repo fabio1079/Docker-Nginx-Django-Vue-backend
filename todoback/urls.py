@@ -28,8 +28,8 @@ router.register(r'todos', TodoViewset)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('admin/', admin.site.urls),
-    path('token-auth/', obtain_jwt_token),
+    path('api/', include(router.urls)),
+    path('api/admin/', admin.site.urls),
+    path('api/token-auth/', obtain_jwt_token),
 ]
 
